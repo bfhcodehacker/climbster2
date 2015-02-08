@@ -20,10 +20,10 @@ module Climbster2
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    # add fonts path
-    config.assets.paths << "#{Rails.root}/app/assets/fonts"
+    # Add the fonts path 
+    config.assets.paths << "#{Rails.root}/app/assets/fonts" 
 
-    # Precompile additional assets
+    # Precompile additional assets 
     config.assets.precompile += %w( .svg .eot .woff .ttf )
 
   end
