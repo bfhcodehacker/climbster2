@@ -52,6 +52,11 @@ gem 'simple_form'
 # add devise for user authentication
 gem 'devise', '>= 3.2.4'
 
+# add geocoder for converting address to latitude and longitude
+gem 'geocoder'
+
+# add figaro to keep our bing API key out of public view
+gem "figaro", ">= 1.0.0"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
