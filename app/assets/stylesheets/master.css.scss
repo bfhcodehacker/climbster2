@@ -10,7 +10,13 @@
   padding:20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+  margin:0;
+  padding:0;
+  font-family: 'nexa_rust_slabblack_shadow_01', sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
   margin:0;
   padding:0;
 }
@@ -30,7 +36,7 @@ body {
 .navbar-inverse .navbar-brand {
    color: #818282;
    font-family: 'nexa_rust_slabblack_shadow_01', sans-serif;
-   font-size: 20px;
+   font-size: 25px;
 }
 
 @-ms-viewport {
