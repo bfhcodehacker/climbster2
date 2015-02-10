@@ -1,4 +1,5 @@
-  <% will_paginate @places, :page_links => false  %>
+
+  <% will_paginate @places, :renderer => BootstrapPagination::Rails %>
 
   <% @places.each do |place| %>
     <div class="booyah-box col-xs-10 col-xs-offset-1">
@@ -13,4 +14,5 @@
     </div>
   <% end %>
 
-  <%= will_paginate @places, :page_links => false %>
+  <%= will_paginate @places, :renderer => BootstrapPagination::Rails  %>
+
