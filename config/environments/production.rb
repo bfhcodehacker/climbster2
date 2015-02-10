@@ -1,6 +1,9 @@
 Climbster2::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Specify URL of production app for mailing stuff
+  config.action_mailer.default_url_options = { :host => 'bfh-climbster2.herokuapp.com' }
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
