@@ -55,6 +55,9 @@ gem 'geocoder'
 # add figaro to keep our bing API key out of public view
 gem "figaro", ">= 1.0.0"
 
+# add carrier wave gem for photos
+gem "carrierwave"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
