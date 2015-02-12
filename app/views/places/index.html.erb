@@ -11,6 +11,22 @@
       <% if place.user.present? %>
         <small><%= place.user.email %></small>
       <% end %>
+
+      <div class="clear"></div>
+      <br />
+
+     <% if place.comments.present? %>
+      <div class="col-xs-12">
+        <blockquote>
+          <% if place.comments.last.humanize_rating.present? %>
+            <b><%= place.comments.last.humanize_rating %></b> -
+          <% end %>
+          <%= place.comments.last.message %>
+          <br />
+          <small><%= place.comments.last.user.email %></small>
+        </blockquote>
+      </div>
+     <% end %>
     </div>
   <% end %>
 
