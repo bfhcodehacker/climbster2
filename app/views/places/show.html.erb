@@ -105,7 +105,10 @@
   <br />
   <% @place.photos.each do |photo| %>
     <%= image_tag photo.picture %></br > 
-    <%= photo.caption %>
+    <%= photo.caption %> 
+    <% if photo.user.email.present? %>
+     - <%= photo.user.email %>
+    <% end %>
   <% end %>
 
 

@@ -23,3 +23,16 @@
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'rock_saltregular';
+    src: url('/assets/rocksalt-webfont.eot');
+    src: url('/assets/rocksalt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/rocksalt-webfont.woff2') format('woff2'),
+         url('/assets/rocksalt-webfont.woff') format('woff'),
+         url('/assets/rocksalt-webfont.ttf') format('truetype'),
+         url('/assets/rocksalt-webfont.svg#rock_saltregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
