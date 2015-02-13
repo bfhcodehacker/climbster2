@@ -1,6 +1,7 @@
 class Comment < ActiveRecord::Base
   belongs_to :user
   belongs_to :place
+  after_create :send_comment_email
 
   validates :message, :presence => true
   validates :rating, :presence => true
@@ -15,5 +16,9 @@ class Comment < ActiveRecord::Base
 
   def humanize_rating
     RATINGS.invert[self.rating]
+  end
+
+  def send_comment_email
+    NotificationMailer.comment_added(self).deliver
   end
 end
