@@ -4,6 +4,19 @@ Climbster2::Application.configure do
   # Specify URL of production app for mailing stuff
   config.action_mailer.default_url_options = { :host => "bfh-climbster2.herokuapp.com" }
 
+  # set up mailgun for email notification
+  ActionMailer::Base.smtp_settings = { 
+    :port => ENV['MAILGUN_SMTP_PORT'], 
+    :address => ENV['MAILGUN_SMTP_SERVER'], 
+    :user_name => ENV['MAILGUN_SMTP_LOGIN'], 
+    :password => ENV['MAILGUN_SMTP_PASSWORD'], 
+    :domain => 'yourapp.heroku.com', 
+    :authentication => :plain, 
+  } 
+  ActionMailer::Base.delivery_method = :smtp
+
+
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
