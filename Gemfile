@@ -58,6 +58,9 @@ gem "figaro", ">= 1.0.0"
 # add carrier wave gem for photos
 gem "carrierwave"
 
+# add fog gem to interact with Amazon S3 bucket
+gem "fog", "~> 1.3.1"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
