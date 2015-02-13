@@ -4,6 +4,19 @@ Climbster2::Application.configure do
   # specify default URL for mailing stuff
   config.action_mailer.default_url_options = { :host => 'localhost:3030' }
 
+  # sep up mailer to work with gmail
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "example.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV['GMAIL_ADDRESS'],
+    password: ENV['GMAIL_PASSWORD']
+  }
+
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
