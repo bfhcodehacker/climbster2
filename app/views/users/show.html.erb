@@ -19,7 +19,7 @@
 <% @user.comments.each do |comment| %>
   <div class="col-xs-12 col-sm-6">
   <% if comment.place %>
-   <h2 class="text-center"><%= link_to comment.place.name, place_path(comment.place) %></h2>
+   <h2 class="text-center"><%= link_to comment.place.name, place_path(comment.place), :style => 'color:inherit' %></h2>
     <blockquote>
       <% if comment.humanize_rating.present? %>
         <b><%= comment.humanize_rating %></b> -
@@ -59,6 +59,16 @@
         </div>
       <% end %>
 
+      <% if place.photos.present? %>
+        <div class="col-xs-12">
+          <% place.photos.each do |photo| %>
+            <%= image_tag photo.picture, :class => 'img' %></br>
+            <%= photo.caption %><br />
+            Photo credit - <%= photo.img_credit %>
+            <div class="clear"></div><br /> 
+          <% end %>
+        </div>
+      <% end %>
       <div class="clear"></div>
   </div>
   <div class="clear"></div>
