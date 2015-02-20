@@ -26,5 +26,8 @@ module Climbster2
     # Precompile additional assets 
     config.assets.precompile += %w( .svg .eot .woff .ttf )
 
+    # add translation functionality
+    config.i18n.enforce_available_locales = false
+
   end
 end
