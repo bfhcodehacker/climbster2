@@ -20,3 +20,11 @@ FactoryGirl.define do
     img_credit "forgot the guys name"
   end
 end
+
+FactoryGirl.define do 
+  factory :user do 
+    email "test@test.com"
+    password "this_test!"
+    password_confirmation "this_test!"
+  end
+end
