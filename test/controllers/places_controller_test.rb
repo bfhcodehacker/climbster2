@@ -26,6 +26,11 @@ class PlacesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "new not signed in" do 
+    get :new
+    assert_redirected_to new_user_session_path
+  end
+
   test "create not signed in" do 
     assert_no_difference 'Place.count' do
       post :create, {:place => {
