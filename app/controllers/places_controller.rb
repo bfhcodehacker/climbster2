@@ -19,7 +19,10 @@ class PlacesController < ApplicationController
   end
 
   def show
-    @place = Place.find(params[:id])
+    @place = Place.where(:id => params[:id]).first
+    if @place.blank?
+      render :text => "Not Found", :status => :not_found
+    end
     @comment = Comment.new
     @photo = Photo.new
   end

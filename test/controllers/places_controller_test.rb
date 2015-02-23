@@ -13,6 +13,14 @@ class PlacesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "show not found" do
+    place = FactoryGirl.create(:place)
+    get :show, :id => 'OMG'
+    assert_response :not_found
+  end
+
+
+
   test "new" do
     user = FactoryGirl.create(:user)
     sign_in user
