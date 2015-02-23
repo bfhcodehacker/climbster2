@@ -19,8 +19,6 @@ class PlacesControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
-
-
   test "new" do
     user = FactoryGirl.create(:user)
     sign_in user
@@ -59,7 +57,7 @@ class PlacesControllerTest < ActionController::TestCase
 #  test "invalid create" do 
 #    user = FactoryGirl.create(:user)
 #    sign_in user
-
+#
 #    assert_no_difference 'Place.count' do
 #      post :create, {:place => {
 #        :name => '',
